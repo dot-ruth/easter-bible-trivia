@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:hearts_redeemed/screens/character_selection_screen.dart';
 import 'package:provider/provider.dart';
 import 'providers/game_state.dart';
-import 'screens/scene_screen.dart';
+// import 'screens/scene_screen.dart';
 
 void main() {
   runApp(
@@ -17,10 +18,10 @@ class MyApp extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+     return MaterialApp(
       title: 'Hearts Redeemed',
       theme: ThemeData(primarySwatch: Colors.brown),
-      home: const SceneScreen(),
+      home: const CharacterSelectionScreen(),
     );
   }
 }

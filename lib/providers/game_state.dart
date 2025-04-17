@@ -7,9 +7,16 @@ class GameState extends ChangeNotifier {
   List<Scene> _scenes = [];
   Scene? _currentScene;
   int _understandingScore = 0;
+  String? _selectedCharacter;
+  String? get selectedCharacter => _selectedCharacter;
 
   Scene? get currentScene => _currentScene;
   int get understandingScore => _understandingScore;
+
+  void selectCharacter(String name) {
+  _selectedCharacter = name;
+  notifyListeners();
+}
 
   Future<void> loadScenes() async {
     final String jsonString = await rootBundle.loadString('lib/data/scene.json');

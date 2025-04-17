@@ -22,6 +22,7 @@ class SceneScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text('Hearts Redeemed')),
       body: Padding(
+        
         padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -37,6 +38,7 @@ class SceneScreen extends StatelessWidget {
               );
             }).toList(),
             const Spacer(),
+            Text("You are playing as: ${gameState.selectedCharacter}"),
             Text("Spiritual Awareness: ${gameState.understandingScore}"),
           ],
         ),
