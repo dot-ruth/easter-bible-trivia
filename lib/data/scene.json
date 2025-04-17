@@ -1,0 +1,32 @@
+[
+    {
+      "id": "scene1",
+      "character": "Roman Soldier",
+      "narrative": "You watch as Jesus carries the cross through the streets. The crowd is loud, but something about this man is different.",
+      "choices": [
+        {
+          "text": "Mock him like the others",
+          "outcomeSceneId": "scene2a",
+          "impact": -20
+        },
+        {
+          "text": "Remain silent and observe",
+          "outcomeSceneId": "scene2b",
+          "impact": 10
+        }
+      ]
+    },
+    {
+      "id": "scene2a",
+      "character": "Roman Soldier",
+      "narrative": "You shout at Jesus, joining the mob. He looks at you, and his eyes pierce your soul.",
+      "choices": []
+    },
+    {
+      "id": "scene2b",
+      "character": "Roman Soldier",
+      "narrative": "You stay silent. You feel conflicted — is this man truly who they say he is?",
+      "choices": []
+    }
+  ]
+  
