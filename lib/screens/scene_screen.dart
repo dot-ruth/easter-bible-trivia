@@ -16,18 +16,41 @@ class SceneScreen extends StatelessWidget {
     );
   }
 
+     final scene = gameState.currentScene;
 
-    final scene = gameState.currentScene;
+  if (scene!.choices.isEmpty) {
+  return Center(
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(scene.narrative, style: TextStyle(fontSize: 18)),
+        SizedBox(height: 24),
+        ElevatedButton(
+          onPressed: () {
+            gameState.reset();
+            Navigator.popUntil(context, (route) => route.isFirst);
+          },
+          child: Text("Play Again"),
+        )
+      ],
+    ),
+  );
+}
+
+
+
+ 
 
     return Scaffold(
       appBar: AppBar(title: const Text('Hearts Redeemed')),
       body: Padding(
         
         padding: const EdgeInsets.all(16.0),
+        
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(scene!.narrative, style: const TextStyle(fontSize: 18)),
+            Text(scene.narrative, style: const TextStyle(fontSize: 18)),
             const SizedBox(height: 20),
             ...scene.choices.map((choice) {
               return ElevatedButton(

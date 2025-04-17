@@ -28,6 +28,26 @@ class GameState extends ChangeNotifier {
 
   void makeChoice(Choice choice) {
     _understandingScore += choice.impact;
+    if (choice.outcomeSceneId == 'final') {
+  int score = _understandingScore;
+
+  String endingId;
+  if (score >= 6) {
+    endingId = 'ending_good';
+  } else if (score >= 3) {
+    endingId = 'ending_neutral';
+  } else {
+    endingId = 'ending_fallen';
+  }
+  _currentScene = _scenes.firstWhere((s) => s.id == endingId);
+
+  // gameState.goToScene(endingId);
+} else {
+  _currentScene = _scenes.firstWhere((s) => s.id == choice.outcomeSceneId);
+  // gameState.increaseSpiritualScore(points);
+  // gameState.goToScene(nextSceneId);
+}
+
     _currentScene = _scenes.firstWhere((s) => s.id == choice.outcomeSceneId);
     notifyListeners();
   }

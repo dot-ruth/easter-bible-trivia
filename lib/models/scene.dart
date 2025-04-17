@@ -16,7 +16,7 @@ class Choice {
 
 class Scene {
   final String id;
-  final String character;
+  final String? character;
   final String narrative;
   final List<Choice> choices;
 
