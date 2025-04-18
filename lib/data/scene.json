@@ -1,0 +1,156 @@
+[
+  {
+    "id": "start_screen",
+    "narrative": "",
+    "imagePath": "assets/start_screen.png",
+    "choices": [
+      {
+        "text": "Start",
+        "outcomeSceneId": "gethsemane"
+      }
+    ]
+  },
+    {
+      "id": "gethsemane",
+      "narrative": "Jesus kneel's in the Garden of Gethsemane. The weight of what lies ahead presses heavily on him.",
+      "imagePath": "assets/praying.png",
+      "choices": [
+        {
+          "text": "he prayed and submitted to God's will",
+          "outcomeSceneId": "jesus_arrest"
+        },
+        {
+          "text": "He fled to avoid arrest.",
+          "outcomeSceneId": "incorrect"
+        }
+      ]
+    },
+    {
+      "id": "jesus_arrest",
+      "narrative": "Judas approaches Jesus with soldiers. A kiss betrays him. The disciples panic.",
+      "imagePath":"assets/judas.png",
+      "choices": [
+        {
+          "text": "Jesus stops Peter from fighting",
+          "outcomeSceneId": "before_pilate"
+        },
+        {
+          "text": "Jesus Let the disciples fight",
+          "outcomeSceneId": "incorrect"
+        }
+      ]
+    },
+    {
+      "id": "before_pilate",
+      "narrative": "Pontius Pilate is conflicted. The crowd demands crucifixion, but he finds no guilt in Jesus.",
+      "imagePath":"assets/barabbas.png",
+      "choices": [
+        {
+          "text": "Pontius Pilate releases Barabbas",
+          "outcomeSceneId": "jesus_carries_cross"
+        },
+        {
+          "text": "Pontius Pilate refuses and defends Jesus",
+          "outcomeSceneId": "incorrect"
+        }
+      ]
+    },
+    {
+      "id": "jesus_carries_cross",
+      "narrative": "Jesus carries the cross through the streets.",
+      "imagePath":"assets/jesus_carrying_the_cross.png",
+      "choices": [
+        {
+          "text": "He continue silently",
+          "outcomeSceneId": "incorrect"
+        },
+        {
+          "text": "He falls from exhaustion",
+          "outcomeSceneId": "simon_help"
+        }
+      ]
+    },
+    {
+      "id": "simon_help",
+      "narrative": "Simon of Cyrene is pulled from the crowd to help carry the cross",
+      "imagePath":"assets/simon_helping_jesus.png",
+      "choices": [
+        {
+          "text": "He Carries it willingly",
+          "outcomeSceneId": "crucifixion"
+        },
+        {
+          "text": "He Complains and resist",
+          "outcomeSceneId": "incorrect"
+        }
+      ]
+    },
+    {
+      "id": "crucifixion",
+      "narrative": "John stands near the cross. Jesus speaks to him, entrusting Mary into his care.",
+      "imagePath":"assets/mary_and_john.png",
+      "choices": [
+        {
+          "text": "John takes Mary into his home",
+          "outcomeSceneId": "burial"
+        },
+        {
+          "text": "John refuses to take in Mary",
+          "outcomeSceneId": "incorrect"
+        }
+      ]
+    },
+    {
+      "id": "burial",
+      "narrative": "Mary Magdalene watches as Jesus is laid in the tomb and weep with sorrow.",
+      "imagePath":"assets/magdalene_weeping.png",
+      "choices": [
+        {
+          "text": "she returns early Sunday to anoint him",
+          "outcomeSceneId": "resurrection"
+        },
+        {
+          "text": "she stays home in fear",
+          "outcomeSceneId": "incorrect"
+        }
+      ]
+    },
+    {
+      "id": "resurrection",
+      "narrative": "The stone is rolled away. Mary Magdalene sees an angel and later, Jesus himself.",
+      "imagePath":"assets/empty-tomb1.jpg",
+      "choices": [
+        {
+          "text": "she went to tell the disciples",
+          "outcomeSceneId": "correct"
+        },
+        {
+          "text": "she stays frozen in awe",
+          "outcomeSceneId": "incorrect"
+        }
+      ]
+    },
+    {
+      "id": "correct",
+      "narrative": "He is not here; HE HAS RISEN, just as he said. Come and see the place where he lay.",
+      "imagePath": "assets/risen.jpg",
+      "choices": [
+        {
+          "text": "Start Again",
+          "outcomeSceneId": "gethsemane"
+        }
+      ]
+    },
+    {
+      "id": "incorrect",
+      "narrative": "Opps, that was an incorrect answer lets try again ",
+      "imagePath": "",
+      "choices": [
+        {
+          "text": "Try Again",
+          "outcomeSceneId": "gethsemane"
+        }
+      ]
+    }
+  ]
+  
