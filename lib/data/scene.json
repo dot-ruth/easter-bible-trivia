@@ -1,4 +1,15 @@
 [
+  {
+    "id": "start_screen",
+    "narrative": "",
+    "imagePath": "assets/start_screen.png",
+    "choices": [
+      {
+        "text": "Start",
+        "outcomeSceneId": "gethsemane"
+      }
+    ]
+  },
     {
       "id": "gethsemane",
       "narrative": "Jesus kneel's in the Garden of Gethsemane. The weight of what lies ahead presses heavily on him.",
@@ -121,8 +132,8 @@
     },
     {
       "id": "correct",
-      "narrative": "He is not here; he has risen, just as he said. Come and see the place where he lay.",
-      "imagePath": "assets/risen.png",
+      "narrative": "He is not here; HE HAS RISEN, just as he said. Come and see the place where he lay.",
+      "imagePath": "assets/risen.jpg",
       "choices": [
         {
           "text": "Start Again",
@@ -132,7 +143,7 @@
     },
     {
       "id": "incorrect",
-      "narrative": "Opps, that was incorrect lets try again ",
+      "narrative": "Opps, that was an incorrect answer lets try again ",
       "imagePath": "",
       "choices": [
         {
