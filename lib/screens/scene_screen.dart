@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/game_state.dart';
-// import '../models/scene.dart';
 
 class SceneScreen extends StatelessWidget {
   const SceneScreen({super.key});
@@ -16,54 +15,58 @@ class SceneScreen extends StatelessWidget {
     );
   }
 
-     final scene = gameState.currentScene;
+final scene = gameState.currentScene;
 
-  if (scene!.choices.isEmpty) {
-  return Center(
-    child: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Text(scene.narrative, style: TextStyle(fontSize: 18)),
-        SizedBox(height: 24),
-        ElevatedButton(
-          onPressed: () {
-            gameState.reset();
-            Navigator.popUntil(context, (route) => route.isFirst);
-          },
-          child: Text("Play Again"),
-        )
-      ],
-    ),
-  );
-}
-
-
-
- 
-
-    return Scaffold(
-      appBar: AppBar(title: const Text('Hearts Redeemed')),
-      body: Padding(
-        
-        padding: const EdgeInsets.all(16.0),
-        
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(scene.narrative, style: const TextStyle(fontSize: 18)),
-            const SizedBox(height: 20),
-            ...scene.choices.map((choice) {
-              return ElevatedButton(
-                onPressed: () {
-                  gameState.makeChoice(choice);
-                },
-                child: Text(choice.text),
-              );
-            }).toList(),
-            const Spacer(),
-            Text("You are playing as: ${gameState.selectedCharacter}"),
-            Text("Spiritual Awareness: ${gameState.understandingScore}"),
-          ],
+return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'Resurrection',
+          style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.w900
+            ),
+          ),
+        backgroundColor: Colors.brown[300],
+        ),
+      body: Container(
+        decoration: BoxDecoration(
+          color: Colors.brown[300],
+          image: DecorationImage(
+            opacity: 0.5,
+            image: AssetImage(scene!.imagePath),
+            fit: BoxFit.fill
+            ),
+        ),
+        child: Padding(
+          
+          padding: const EdgeInsets.all(50.0),
+          
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text(
+                scene.narrative, 
+                style: const TextStyle(
+                  fontSize: 18,
+                  color: Colors.white,
+                  fontWeight: FontWeight.w600
+                  )
+                  ),
+              const SizedBox(height: 20),
+              ...scene.choices.map((choice) {
+                return ElevatedButton(
+                  onPressed: () {
+                    gameState.makeChoice(choice);
+                  },
+                  child: Text(
+                    choice.text,
+                    style: TextStyle(color: Colors.black),
+                    ),
+                );
+              })
+            ],
+          ),
         ),
       ),
     );
