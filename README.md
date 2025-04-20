@@ -1,4 +1,4 @@
-# hearts_redeemed
+# Easter Bible Trivia
 
 A new Flutter project.
 
