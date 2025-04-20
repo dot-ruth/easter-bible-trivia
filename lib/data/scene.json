@@ -165,7 +165,7 @@
       "choices": [
         {
           "text": "Start Again",
-          "outcomeSceneId": "gethsemane"
+          "outcomeSceneId": "start_screen"
         }
       ]
     },
