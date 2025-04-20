@@ -37,6 +37,10 @@
         {
           "text": "Jesus Let the disciples fight",
           "outcomeSceneId": "incorrect"
+        },
+        {
+          "text": "Previous Scene",
+          "outcomeSceneId": "gethsemane"
         }
       ]
     },
@@ -52,6 +56,10 @@
         {
           "text": "Pontius Pilate refuses and defends Jesus",
           "outcomeSceneId": "incorrect"
+        },
+        {
+          "text": "Previous Scene",
+          "outcomeSceneId": "jesus_arrest"
         }
       ]
     },
@@ -67,6 +75,10 @@
         {
           "text": "He falls from exhaustion",
           "outcomeSceneId": "simon_help"
+        },
+        {
+          "text": "Previous Scene",
+          "outcomeSceneId": "before_pilate"
         }
       ]
     },
@@ -82,6 +94,10 @@
         {
           "text": "He Complains and resist",
           "outcomeSceneId": "incorrect"
+        },
+        {
+          "text": "Previous Scene",
+          "outcomeSceneId": "jesus_carries_cross"
         }
       ]
     },
@@ -97,6 +113,10 @@
         {
           "text": "John refuses to take in Mary",
           "outcomeSceneId": "incorrect"
+        },
+        {
+          "text": "Previous Scene",
+          "outcomeSceneId": "simon_help"
         }
       ]
     },
@@ -112,6 +132,10 @@
         {
           "text": "she stays home in fear",
           "outcomeSceneId": "incorrect"
+        },
+        {
+          "text": "Previous Scene",
+          "outcomeSceneId": "crucifixion"
         }
       ]
     },
@@ -127,6 +151,10 @@
         {
           "text": "she stays frozen in awe",
           "outcomeSceneId": "incorrect"
+        },
+        {
+          "text": "Previous Scene",
+          "outcomeSceneId": "burial"
         }
       ]
     },
@@ -148,7 +176,7 @@
       "choices": [
         {
           "text": "Try Again",
-          "outcomeSceneId": "gethsemane"
+          "outcomeSceneId": "start_screen"
         }
       ]
     }
